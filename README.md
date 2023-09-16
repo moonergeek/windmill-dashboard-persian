@@ -1,8 +1,5 @@
 <p align="center">
-    <h1>Windmill Dashboard Next.js Typescript</h1>
-    <a href="https://windmill-dashboard-nextjs-typescript.vercel.app/example">
-      <img alt="Windmill Dashboard React" width="600" src=".github/windmill-dashboard-thumbnail.jpg">
-    </a><br>
+    <h1>Persian version of Windmill dashboard</h1>
 </p>
 
 See the [Original Project by @estevanmaito](https://github.com/estevanmaito/windmill-dashboard-react/)
