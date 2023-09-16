@@ -40,7 +40,7 @@ function LoginPage() {
                 <Input
                   className="mt-1"
                   type="email"
-                  placeholder="john@doe.com"
+                  placeholder="mahan@gmail.com"
                 />
               </Label>
 

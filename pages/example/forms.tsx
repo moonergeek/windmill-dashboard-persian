@@ -1,29 +1,34 @@
-import React from 'react'
+import React from "react";
 
-import { Input, HelperText, Label, Select, Textarea } from '@roketid/windmill-react-ui'
-import CTA from 'example/components/CTA'
-import PageTitle from 'example/components/Typography/PageTitle'
-import SectionTitle from 'example/components/Typography/SectionTitle'
+import {
+  Input,
+  HelperText,
+  Label,
+  Select,
+  Textarea,
+} from "@roketid/windmill-react-ui";
+import PageTitle from "example/components/Typography/PageTitle";
+import SectionTitle from "example/components/Typography/SectionTitle";
 
-import Layout from 'example/containers/Layout'
-import { MailIcon } from 'icons'
+import Layout from "example/containers/Layout";
+import { MailIcon } from "icons";
 
 function Forms() {
   return (
     <Layout>
       <PageTitle>Forms</PageTitle>
-      <CTA />
+
       <SectionTitle>Elements</SectionTitle>
 
       <div className="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800">
         <Label>
           <span>Name</span>
-          <Input className="mt-1" placeholder="Jane Doe" />
+          <Input className="mt-1" placeholder="Mahan Jafari" />
         </Label>
 
         <Label className="mt-4">
           <span>Disabled</span>
-          <Input disabled className="mt-1" placeholder="Jane Doe" />
+          <Input disabled className="mt-1" placeholder="Mahan Jafari" />
         </Label>
 
         <div className="mt-4">
@@ -40,7 +45,12 @@ function Forms() {
               <span className="ml-2">Business</span>
             </Label>
             <Label disabled className="ml-6" radio>
-              <Input disabled type="radio" value="disabled" name="accountType" />
+              <Input
+                disabled
+                type="radio"
+                value="disabled"
+                name="accountType"
+              />
               <span className="ml-2">Disabled</span>
             </Label>
           </div>
@@ -69,7 +79,11 @@ function Forms() {
 
         <Label className="mt-4">
           <span>Message</span>
-          <Textarea className="mt-1" rows={3} placeholder="Enter some long form content." />
+          <Textarea
+            className="mt-1"
+            rows={3}
+            placeholder="Enter some long form content."
+          />
         </Label>
 
         <Label className="mt-6" check>
@@ -85,20 +99,22 @@ function Forms() {
       <div className="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800">
         <Label>
           <span>Invalid input</span>
-          <Input className="mt-1" valid={false} placeholder="Jane Doe" />
+          <Input className="mt-1" valid={false} placeholder="Mahan Jafari" />
           <HelperText valid={false}>Your password is too short.</HelperText>
         </Label>
 
         <Label className="mt-4">
           <span>Valid input</span>
-          <Input className="mt-1" valid={true} placeholder="Jane Doe" />
+          <Input className="mt-1" valid={true} placeholder="Mahan Jafari" />
           <HelperText valid={true}>Your password is strong.</HelperText>
         </Label>
 
         <Label className="mt-4">
           <span>Helper text</span>
-          <Input className="mt-1" placeholder="Jane Doe" />
-          <HelperText>Your password must be at least 6 characters long.</HelperText>
+          <Input className="mt-1" placeholder="Mahan Jafari" />
+          <HelperText>
+            Your password must be at least 6 characters long.
+          </HelperText>
         </Label>
       </div>
 
@@ -112,7 +128,7 @@ function Forms() {
           <div className="relative text-gray-500 focus-within:text-purple-600 dark:focus-within:text-purple-400">
             <input
               className="block w-full pl-10 mt-1 text-sm text-black dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray form-input"
-              placeholder="Jane Doe"
+              placeholder="Mahan Jafari"
             />
             <div className="absolute inset-y-0 flex items-center ml-3 pointer-events-none">
               <MailIcon className="w-5 h-5" aria-hidden="true" />
@@ -126,7 +142,7 @@ function Forms() {
           <div className="relative text-gray-500 focus-within:text-purple-600 dark:focus-within:text-purple-400">
             <input
               className="block w-full pr-10 mt-1 text-sm text-black dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray form-input"
-              placeholder="Jane Doe"
+              placeholder="Mahan Jafari"
             />
             <div className="absolute inset-y-0 right-0 flex items-center mr-3 pointer-events-none">
               <MailIcon className="w-5 h-5" aria-hidden="true" />
@@ -144,7 +160,7 @@ function Forms() {
           <div className="relative">
             <input
               className="block w-full pl-20 mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray form-input"
-              placeholder="Jane Doe"
+              placeholder="Mahan Jafari"
             />
             <button className="absolute inset-y-0 px-4 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-l-md active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray">
               Click
@@ -157,7 +173,7 @@ function Forms() {
           <div className="relative text-gray-500 focus-within:text-purple-600">
             <input
               className="block w-full pr-20 mt-1 text-sm text-black dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray form-input"
-              placeholder="Jane Doe"
+              placeholder="Mahan Jafari"
             />
             <button className="absolute inset-y-0 right-0 px-4 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-r-md active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple">
               Click
@@ -166,7 +182,7 @@ function Forms() {
         </Label>
       </div>
     </Layout>
-  )
+  );
 }
 
-export default Forms
+export default Forms;
