@@ -1,7 +1,7 @@
-import React from 'react'
+import React from "react";
 
-interface IMain{
-  children: React.ReactNode
+interface IMain {
+  children: React.ReactNode;
 }
 
 function Main({ children }: IMain) {
@@ -12,4 +12,4 @@ function Main({ children }: IMain) {
   );
 }
 
-export default Main
+export default Main;

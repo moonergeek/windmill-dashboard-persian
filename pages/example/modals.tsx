@@ -23,14 +23,14 @@ function Modals() {
 
   return (
     <Layout>
-      <PageTitle>Modals</PageTitle>
+      <PageTitle>مودال ها</PageTitle>
 
       <div>
-        <Button onClick={openModal}>Open modal</Button>
+        <Button onClick={openModal}>باز کردن</Button>
       </div>
 
       <Modal isOpen={isModalOpen} onClose={closeModal}>
-        <ModalHeader>Modal header</ModalHeader>
+        <ModalHeader>هدر مودال</ModalHeader>
         <ModalBody>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum et
           eligendi repudiandae voluptatem tempore!
@@ -43,20 +43,20 @@ function Modals() {
            */}
           <div className="hidden sm:block">
             <Button layout="outline" onClick={closeModal}>
-              Cancel
+              کنسل
             </Button>
           </div>
           <div className="hidden sm:block">
-            <Button>Accept</Button>
+            <Button>می‌پذیرم</Button>
           </div>
           <div className="block w-full sm:hidden">
             <Button block size="large" layout="outline" onClick={closeModal}>
-              Cancel
+              کنسل
             </Button>
           </div>
           <div className="block w-full sm:hidden">
             <Button block size="large">
-              Accept
+              می‌پذیرم
             </Button>
           </div>
         </ModalFooter>

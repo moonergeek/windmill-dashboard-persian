@@ -4,90 +4,92 @@
  *
  */
 
-interface IRoute{
-  path?: string
-  icon?: string
-  name: string
-  routes?: IRoute[]
-  checkActive?(pathname: String, route: IRoute): boolean
-  exact?: boolean
+interface IRoute {
+  path?: string;
+  icon?: string;
+  name: string;
+  routes?: IRoute[];
+  checkActive?(pathname: String, route: IRoute): boolean;
+  exact?: boolean;
 }
 
-export function routeIsActive (pathname: String, route: IRoute): boolean {
+export function routeIsActive(pathname: String, route: IRoute): boolean {
   if (route.checkActive) {
-    return route.checkActive(pathname, route)
+    return route.checkActive(pathname, route);
   }
 
   return route?.exact
     ? pathname == route?.path
-    : (route?.path ? pathname.indexOf(route.path) === 0 : false)
+    : route?.path
+    ? pathname.indexOf(route.path) === 0
+    : false;
 }
 
 const routes: IRoute[] = [
   {
-    path: '/example', // the url
-    icon: 'HomeIcon', // the component being exported from icons/index.js
-    name: 'Dashboard', // name that appear in Sidebar
+    path: "/example", // the url
+    icon: "HomeIcon", // the component being exported from icons/index.js
+    name: "داشبورد", // name that appear in Sidebar
     exact: true,
   },
   {
-    path: '/example/forms',
-    icon: 'FormsIcon',
-    name: 'Forms',
+    path: "/example/forms",
+    icon: "FormsIcon",
+    name: "فرم ها",
   },
   {
-    path: '/example/cards',
-    icon: 'CardsIcon',
-    name: 'Cards',
+    path: "/example/cards",
+    icon: "CardsIcon",
+    name: "کارت ها",
   },
   {
-    path: '/example/charts',
-    icon: 'ChartsIcon',
-    name: 'Charts',
+    path: "/example/charts",
+    icon: "ChartsIcon",
+    name: "نمودار ها",
   },
   {
-    path: '/example/buttons',
-    icon: 'ButtonsIcon',
-    name: 'Buttons',
+    path: "/example/buttons",
+    icon: "ButtonsIcon",
+    name: "دکمه ها",
   },
   {
-    path: '/example/modals',
-    icon: 'ModalsIcon',
-    name: 'Modals',
+    path: "/example/modals",
+    icon: "ModalsIcon",
+    name: "مودال ها",
   },
   {
-    path: '/example/tables',
-    icon: 'TablesIcon',
-    name: 'Tables',
+    path: "/example/tables",
+    icon: "TablesIcon",
+    name: "جدول ها",
   },
   {
-    icon: 'PagesIcon',
-    name: 'Pages',
+    icon: "PagesIcon",
+    name: "صفحه ها",
     routes: [
       // submenu
       {
-        path: '/example/login',
-        name: 'Login',
+        path: "/example/login",
+        name: "ورود",
       },
       {
-        path: '/example/create-account',
-        name: 'Create account',
+        path: "/example/create-account",
+        name: "عضویت",
       },
       {
-        path: '/example/forgot-password',
-        name: 'Forgot password',
+        path: "/example/forgot-password",
+        name: "فراموشی رمز",
       },
       {
-        path: '/example/404',
-        name: '404',
+        path: "/example/404",
+        name: "صفحه ۴۰۴",
       },
       {
-        path: '/example/blank',
-        name: 'Blank',
+        path: "/example/blank",
+        name: "صفحه خالی",
       },
     ],
   },
-]
+];
 
-export type {IRoute}
-export default routes
+export type { IRoute };
+export default routes;
